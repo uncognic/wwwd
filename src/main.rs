@@ -12,7 +12,6 @@ fn client(mut stream: TcpStream) {
         let request = String::from_utf8_lossy(&buffer[..bytes_read]);
         println!("Received request:\n{}", request);
 
-
         let first_line = request.lines().next().unwrap_or("");
         let mut served = false;
 
