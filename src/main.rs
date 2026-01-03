@@ -5,6 +5,7 @@ use std::path::Path;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::thread;
 use std::time::Duration;
+use scopeguard;
 
 static CONNECTIONS: AtomicUsize = AtomicUsize::new(0);
 const MAX_CONNECTIONS: usize = 100;
